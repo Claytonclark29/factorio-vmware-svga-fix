@@ -8,7 +8,7 @@ The minimal selection is **one indexed draw**, uint16 indices `[0,1,2,2,1,3]`, i
 
 The oracle compares covered-pixel tuples, identifying coverage by alpha. It does not assert the full background image or exact coverage count. The original high unsigned sentinel remains deliberately unchanged: a baseline pass must not be mistaken for a successful high-value clear. Clear-specific evidence lives in [unsigned-clear.json](../evidence/unsigned-clear.json). No indirect command is exercised by this standalone baseline suite.
 
-Example **future rendering commands**, not run during publication:
+Example **future rendering commands**, not run during publication. Run these in the original graphical-session shell after the build subshell exits; the build block leaves that shell's `DISPLAY` unchanged. If you previously ran the environment cleanup without the parentheses, open a fresh terminal in the authorized graphical session instead of guessing a display value:
 
 ```bash
 stage="$PWD/stage-patched"

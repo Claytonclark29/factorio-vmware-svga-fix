@@ -6,9 +6,10 @@ Obtain that exact Ubuntu source package in a fresh workspace using your distribu
 
 Provide the recorded dependencies before building. No installation commands are run by this repository. The retained minimal configuration resolves X11/XCB, GLVND, DRM, LLVM, expat, zlib/zstd and XML-related components; the package/version list documents the actual prerequisite transaction, while the resolved Meson list captures additional existing libraries. The complete distribution package build-dependency set may include components disabled by the minimal configuration.
 
-In the following example, `mesa-src` is that verified unpacked source and `repository` is this repository. Use private absolute workspace paths for these local variables; do not publish personal path expansions. Do not use sudo or replace system libraries.
+In the following example, `mesa-src` is that verified unpacked source and `repository` is this repository. Use private absolute workspace paths for these local variables; do not publish personal path expansions. Do not use sudo or replace system libraries. Run the build block from your graphical-session shell. The parentheses create a subshell: its environment cleanup applies only to the build, preserving the caller's `DISPLAY` and other session variables for the later reproducer command.
 
 ```bash
+(
 export PATH=/usr/lib/llvm-20/bin:/usr/bin:/bin
 export CC=/usr/bin/gcc CXX=/usr/bin/g++
 unset LD_LIBRARY_PATH LD_PRELOAD LIBGL_DRIVERS_PATH MESA_LOADER_DRIVER_OVERRIDE
@@ -59,6 +60,7 @@ patch --directory=mesa-src --batch --forward -p1 --dry-run -i "$PWD/repository/p
 patch --directory=mesa-src --batch --forward -p1 -i "$PWD/repository/patches/0001-svga-indexed-vertex-id-bias.patch"
 meson compile -C build -j 2
 DESTDIR="$PWD/stage-patched" meson install -C build --no-rebuild
+)
 ```
 
 Keep an unmodified source snapshot before applying the candidate. Only `src/gallium/drivers/svga/svga_pipe_draw.c` should change. Historical baseline file SHA256: `337cb4fa11ac9c965a4dd9e63e1472af851179ca72527047be47c9c163080d45`; patched: `2c7504896635b3afb953395e9e1a575830271cbea6accadae5428ecefdedb06a`. Publication verification applies the patch only to an isolated copy and compares those bytes; it does not compile Mesa.
