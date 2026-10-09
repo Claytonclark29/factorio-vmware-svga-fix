@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "finding_id": "FACTORIO-VIS-001",
+  "record_kind": "sanitized-derived-measurements",
+  "dimensions": [
+    1718,
+    920
+  ],
+  "patched_result": "Repeated erroneous shoreline spikes disappear; shoreline visually agrees with existing llvmpipe reference, but frame is not pixel-identical.",
+  "final_fullframe_diff_gt32_vs_CPU": {
+    "unpatched": 26787,
+    "patched": 373
+  },
+  "final_coast_region_diff_gt32_vs_CPU": {
+    "unpatched": 14221,
+    "patched": 88
+  },
+  "scope_limit": "No live game verification; residual GPU/CPU differences remain and are not diagnosed by this test",
+  "assets_included": false,
+  "limits": [
+    "This is retained replay evidence, not a new Factorio run.",
+    "No frame is claimed pixel-identical; original proprietary trace and images are excluded."
+  ]
+}

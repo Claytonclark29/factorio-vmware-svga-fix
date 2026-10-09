@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "guest_os": "Ubuntu 24.04 LTS",
+  "architecture": "x86_64",
+  "mesa": "25.2.8 (Ubuntu source 25.2.8-0ubuntu0.24.04.2)",
+  "software_renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+  "svga_renderer": "SVGA3D; build: RELEASE; LLVM",
+  "svga_GL": "4.3 Core Profile",
+  "software_GL": "4.5 Core Profile",
+  "display_pixels": [
+    1920,
+    1080
+  ],
+  "host_workstation": "26.0.1 build25688693",
+  "host_gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "host_windows_driver": "32.0.16.1088",
+  "host_vulkan_driver": "610.88",
+  "conditions_35_37_host_renderer": "ISBRenderer(VKRenderer)",
+  "reported_dxProvokingVertex": 1,
+  "limits": [
+    "Host values are sanitized retained observations, not new capability probes.",
+    "Earlier renderer sessions differed; capability and renderer changes were confounded.",
+    "Participating workload coordination was not guest-wide GPU isolation."
+  ]
+}
