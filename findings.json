@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "findings": [
+    {
+      "id": "SVGA-VID-001",
+      "status": "verified-fix-in-tested-scope",
+      "title": "Indexed vertex ID bias incorrectly includes element start",
+      "expected": "Indexed built-in vertex ID includes base vertex, not the index-buffer start; array draws retain first.",
+      "observed": "Patched baseline covered-pixel oracle passed 180/180 on SVGA versus 57/180 unpatched in both retained sessions; software passed 180/180 either way.",
+      "conditions": [
+        "Mesa 25.2.8 private builds",
+        "GLX pbuffer, integer attachment, explicit attribute oracle"
+      ],
+      "evidence": [
+        "evidence/vertex-id.json"
+      ],
+      "limits": [
+        "Not a complete SVGA conformance claim.",
+        "Publication-adapted standalone fixture not GL-retested."
+      ]
+    },
+    {
+      "id": "SVGA-IND-001",
+      "status": "unresolved",
+      "title": "Indirect indexed and background discrepancies remain",
+      "expected": "Equivalent direct and indirect draws produce matching coverage and values.",
+      "observed": "uint8 indirect had no coverage in the fixed reduction; uint16 indirect retained correct covered IDs, with failing SVGA background clears.",
+      "conditions": [
+        "condition35 fixed reduction",
+        "two index widths, two instances, first index17, base vertex0"
+      ],
+      "evidence": [
+        "evidence/indirect-reduction.json"
+      ],
+      "limits": [
+        "No claim the vertex-ID patch fixes indirect rendering."
+      ]
+    },
+    {
+      "id": "SVGA-CLR-001",
+      "status": "observed-unresolved",
+      "title": "High unsigned framebuffer clears read back zero",
+      "expected": "RGBA32UI clear H=(4294967295,4294967295,4294967295,0) survives exactly.",
+      "observed": "SVGA high uploads and markers pass, but high clears become zero on either attachment; low clears and software controls pass.",
+      "conditions": [
+        "conditions36–37",
+        "zero application draws/compiles/links",
+        "fixed crossover sequence"
+      ],
+      "evidence": [
+        "evidence/unsigned-clear.json"
+      ],
+      "limits": [
+        "Readback agreement does not prove independent implementations."
+      ]
+    },
+    {
+      "id": "SVGA-CLR-HYP-001",
+      "status": "untested-hypothesis",
+      "title": "SVGA integer clear uses signed union member before float command",
+      "expected": "Unsigned values retain unsigned meaning or take an exact fallback.",
+      "observed": "Static source reads color->i for eligibility and casts it to float; H predicts -1.0f command RGB. No emitted command was captured.",
+      "conditions": [
+        "Static source review only",
+        "no candidate patch or instrumentation implemented"
+      ],
+      "evidence": [
+        "docs/unsigned-clear-candidate.md",
+        "evidence/unsigned-clear.json"
+      ],
+      "limits": [
+        "Host conversion and live selected path remain unverified."
+      ]
+    },
+    {
+      "id": "FACTORIO-VIS-001",
+      "status": "observed-improvement",
+      "title": "Retained Factorio shoreline replay improved",
+      "expected": "Remove repeated shoreline spikes without claiming all rendering defects fixed.",
+      "observed": "Retained patched replay removed the repeated spikes and reduced large coast-region differences from14221 to88 pixels versus software.",
+      "conditions": [
+        "Historical immutable trace replay",
+        "same comparison region"
+      ],
+      "evidence": [
+        "evidence/factorio-replay.json"
+      ],
+      "limits": [
+        "Trace/assets omitted; residual differences remain.",
+        "Not a performance or complete gameplay validation."
+      ]
+    }
+  ]
+}

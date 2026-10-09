@@ -1,0 +1,7 @@
+# Machine-readable records
+
+`findings.json` conforms to [findings.schema.json](../schema/findings.schema.json), JSON Schema 2020-12. Finding IDs are stable; status changes require new evidence, not a renamed ID. `expected` is the oracle; `observed` is a measurement or explicitly labeled static inference. `conditions` and `limits` bound each claim. Evidence paths resolve relative to the repository root and must exist.
+
+Evidence JSON uses `schema_version:1`. Numeric measurements are sanitized projections from retained originals: vertex/indirect records retain case conditions, oracle tuples, observed tuples/counts and pass flags; clear records retain per-phase expected tuples and complete per-value pixel histograms, not private raw logs. Counts are integers; channel tuples are unsigned32-bit values. `source_artifact_sha256` identifies the original private artifact, which is not downloadable from this repository. It is different from the sanitized-file hash.
+
+`artifact-manifest.json` is the explicit publication allowlist: each entry has repository-relative `path`, byte count and SHA256. It covers every published file except itself, avoiding self-reference. Private source paths and retention metadata live outside this bundle and are never published. File links are usable without access to private originals. Build/environment JSON are factual records, not current system scans. They do not expose host identities, session paths or receipts.

@@ -1,0 +1,1197 @@
+{
+  "schema_version": 1,
+  "finding_id": "SVGA-CLR-001",
+  "record_kind": "sanitized-derived-measurements",
+  "format": "RGBA32UI",
+  "dimensions": [
+    64,
+    64
+  ],
+  "runs": [
+    {
+      "condition": 36,
+      "renderer_mode": "software",
+      "source_artifact_sha256": "72e8a66b2041ced6baaa254e9eb4a413ca928d1664d2106d4cd12157de549a2c",
+      "application_draws": 0,
+      "application_shader_compilations": 0,
+      "application_program_links": 0,
+      "nonzero_gl_errors": 0,
+      "phases": [
+        {
+          "name": "original",
+          "expected": [
+            [
+              4294967295,
+              4294967295,
+              4294967295,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "passed": true,
+          "reads": [
+            {
+              "attachment": 0,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    4294967295,
+                    4294967295,
+                    4294967295,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0
+            },
+            {
+              "attachment": 1,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0
+            }
+          ]
+        },
+        {
+          "name": "small-distinct",
+          "expected": [
+            [
+              17,
+              33,
+              65,
+              129
+            ],
+            [
+              3,
+              5,
+              7,
+              11
+            ]
+          ],
+          "passed": true,
+          "reads": [
+            {
+              "attachment": 0,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    17,
+                    33,
+                    65,
+                    129
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0
+            },
+            {
+              "attachment": 1,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    3,
+                    5,
+                    7,
+                    11
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition": 36,
+      "renderer_mode": "svga",
+      "source_artifact_sha256": "926d22989a86307aace7fc376dbc019b35d935c82897f9fd6b8344881184d2e1",
+      "application_draws": 0,
+      "application_shader_compilations": 0,
+      "application_program_links": 0,
+      "nonzero_gl_errors": 0,
+      "phases": [
+        {
+          "name": "original",
+          "expected": [
+            [
+              4294967295,
+              4294967295,
+              4294967295,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "passed": false,
+          "reads": [
+            {
+              "attachment": 0,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 4096,
+              "untouched_poison_pixels": 0
+            },
+            {
+              "attachment": 1,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0
+            }
+          ]
+        },
+        {
+          "name": "small-distinct",
+          "expected": [
+            [
+              17,
+              33,
+              65,
+              129
+            ],
+            [
+              3,
+              5,
+              7,
+              11
+            ]
+          ],
+          "passed": true,
+          "reads": [
+            {
+              "attachment": 0,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    17,
+                    33,
+                    65,
+                    129
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0
+            },
+            {
+              "attachment": 1,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    3,
+                    5,
+                    7,
+                    11
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition": 37,
+      "renderer_mode": "software",
+      "source_artifact_sha256": "03344094dc5b655e012741b2ae7cc1d7d663d67e0186a9cbf22aea51ed56ab46",
+      "application_draws": 0,
+      "application_shader_compilations": 0,
+      "application_program_links": 0,
+      "nonzero_gl_errors": 0,
+      "phases": [
+        {
+          "name": "high-upload",
+          "expected": [
+            [
+              4294967295,
+              4294967295,
+              4294967295,
+              0
+            ],
+            [
+              4294967295,
+              4294967295,
+              4294967295,
+              0
+            ]
+          ],
+          "passed": true,
+          "reads": [
+            {
+              "attachment": 0,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    4294967295,
+                    4294967295,
+                    4294967295,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 0,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    4294967295,
+                    4294967295,
+                    4294967295,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 1,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    4294967295,
+                    4294967295,
+                    4294967295,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 1,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    4294967295,
+                    4294967295,
+                    4294967295,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            }
+          ]
+        },
+        {
+          "name": "round1-marker",
+          "expected": [
+            [
+              257,
+              513,
+              769,
+              17
+            ],
+            [
+              258,
+              514,
+              770,
+              18
+            ]
+          ],
+          "passed": true,
+          "reads": [
+            {
+              "attachment": 0,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    257,
+                    513,
+                    769,
+                    17
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 0,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    257,
+                    513,
+                    769,
+                    17
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 1,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    258,
+                    514,
+                    770,
+                    18
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 1,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    258,
+                    514,
+                    770,
+                    18
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            }
+          ]
+        },
+        {
+          "name": "round1-clear",
+          "expected": [
+            [
+              17,
+              33,
+              65,
+              0
+            ],
+            [
+              4294967295,
+              4294967295,
+              4294967295,
+              0
+            ]
+          ],
+          "passed": true,
+          "reads": [
+            {
+              "attachment": 0,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    17,
+                    33,
+                    65,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": 0
+            },
+            {
+              "attachment": 0,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    17,
+                    33,
+                    65,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": 0
+            },
+            {
+              "attachment": 1,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    4294967295,
+                    4294967295,
+                    4294967295,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": 0
+            },
+            {
+              "attachment": 1,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    4294967295,
+                    4294967295,
+                    4294967295,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": 0
+            }
+          ]
+        },
+        {
+          "name": "round2-marker",
+          "expected": [
+            [
+              257,
+              513,
+              769,
+              33
+            ],
+            [
+              258,
+              514,
+              770,
+              34
+            ]
+          ],
+          "passed": true,
+          "reads": [
+            {
+              "attachment": 0,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    257,
+                    513,
+                    769,
+                    33
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 0,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    257,
+                    513,
+                    769,
+                    33
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 1,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    258,
+                    514,
+                    770,
+                    34
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 1,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    258,
+                    514,
+                    770,
+                    34
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            }
+          ]
+        },
+        {
+          "name": "round2-clear",
+          "expected": [
+            [
+              4294967295,
+              4294967295,
+              4294967295,
+              0
+            ],
+            [
+              17,
+              33,
+              65,
+              0
+            ]
+          ],
+          "passed": true,
+          "reads": [
+            {
+              "attachment": 0,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    4294967295,
+                    4294967295,
+                    4294967295,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": 0
+            },
+            {
+              "attachment": 0,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    4294967295,
+                    4294967295,
+                    4294967295,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": 0
+            },
+            {
+              "attachment": 1,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    17,
+                    33,
+                    65,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": 0
+            },
+            {
+              "attachment": 1,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    17,
+                    33,
+                    65,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition": 37,
+      "renderer_mode": "svga",
+      "source_artifact_sha256": "1285bb3d22dfaa163f61038abbfe791636db3f00f53cabdef0640ca8087c2250",
+      "application_draws": 0,
+      "application_shader_compilations": 0,
+      "application_program_links": 0,
+      "nonzero_gl_errors": 0,
+      "phases": [
+        {
+          "name": "high-upload",
+          "expected": [
+            [
+              4294967295,
+              4294967295,
+              4294967295,
+              0
+            ],
+            [
+              4294967295,
+              4294967295,
+              4294967295,
+              0
+            ]
+          ],
+          "passed": true,
+          "reads": [
+            {
+              "attachment": 0,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    4294967295,
+                    4294967295,
+                    4294967295,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 0,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    4294967295,
+                    4294967295,
+                    4294967295,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 1,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    4294967295,
+                    4294967295,
+                    4294967295,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 1,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    4294967295,
+                    4294967295,
+                    4294967295,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            }
+          ]
+        },
+        {
+          "name": "round1-marker",
+          "expected": [
+            [
+              257,
+              513,
+              769,
+              17
+            ],
+            [
+              258,
+              514,
+              770,
+              18
+            ]
+          ],
+          "passed": true,
+          "reads": [
+            {
+              "attachment": 0,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    257,
+                    513,
+                    769,
+                    17
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 0,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    257,
+                    513,
+                    769,
+                    17
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 1,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    258,
+                    514,
+                    770,
+                    18
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 1,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    258,
+                    514,
+                    770,
+                    18
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            }
+          ]
+        },
+        {
+          "name": "round1-clear",
+          "expected": [
+            [
+              17,
+              33,
+              65,
+              0
+            ],
+            [
+              4294967295,
+              4294967295,
+              4294967295,
+              0
+            ]
+          ],
+          "passed": false,
+          "reads": [
+            {
+              "attachment": 0,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    17,
+                    33,
+                    65,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": 0
+            },
+            {
+              "attachment": 0,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    17,
+                    33,
+                    65,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": 0
+            },
+            {
+              "attachment": 1,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 4096,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": 0
+            },
+            {
+              "attachment": 1,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 4096,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": 0
+            }
+          ]
+        },
+        {
+          "name": "round2-marker",
+          "expected": [
+            [
+              257,
+              513,
+              769,
+              33
+            ],
+            [
+              258,
+              514,
+              770,
+              34
+            ]
+          ],
+          "passed": true,
+          "reads": [
+            {
+              "attachment": 0,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    257,
+                    513,
+                    769,
+                    33
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 0,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    257,
+                    513,
+                    769,
+                    33
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 1,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    258,
+                    514,
+                    770,
+                    34
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            },
+            {
+              "attachment": 1,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    258,
+                    514,
+                    770,
+                    34
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": null
+            }
+          ]
+        },
+        {
+          "name": "round2-clear",
+          "expected": [
+            [
+              4294967295,
+              4294967295,
+              4294967295,
+              0
+            ],
+            [
+              17,
+              33,
+              65,
+              0
+            ]
+          ],
+          "passed": false,
+          "reads": [
+            {
+              "attachment": 0,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 4096,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": 0
+            },
+            {
+              "attachment": 0,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 4096,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": 0
+            },
+            {
+              "attachment": 1,
+              "route": "read-pixels",
+              "observed": [
+                {
+                  "values": [
+                    17,
+                    33,
+                    65,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": 0
+            },
+            {
+              "attachment": 1,
+              "route": "get-tex-image",
+              "observed": [
+                {
+                  "values": [
+                    17,
+                    33,
+                    65,
+                    0
+                  ],
+                  "pixels": 4096
+                }
+              ],
+              "mismatch_pixels": 0,
+              "untouched_poison_pixels": 0,
+              "marker_retained_pixels": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "No command payload trace was recorded.",
+    "Zero application draws/compiles/links does not exclude internal driver drawing or shaders.",
+    "Two readback APIs may share driver implementation; fixed order does not establish order independence."
+  ]
+}

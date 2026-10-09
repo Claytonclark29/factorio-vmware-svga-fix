@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+*.zip
+*.trace
+*.so
+*.log
+stage-*/
+build/
+private*/

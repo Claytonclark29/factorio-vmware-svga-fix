@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "scope": "explicit reviewed publication allowlist; manifest excludes itself",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 75,
+      "sha256": "15ab2d0727f3892c966b903985db4ec0076f7cd30aa5353c29cf1979d5c409cf"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1094,
+      "sha256": "4a2431fe5e107e5fe6b25df2d68aa5e92468565a928bfdc3834ac3cdaba75853"
+    },
+    {
+      "path": "LICENSES/Mesa-MIT.txt",
+      "bytes": 1213,
+      "sha256": "0c80aea67c4d1120678027ba34111bee6ce02a7f55eb866547151b14e267c07e"
+    },
+    {
+      "path": "LICENSES/README.md",
+      "bytes": 1224,
+      "sha256": "26dcdd3466c62aea52b8c89eed7ee9dd223cb62bc0a1d7bf1aa13ef8155d7104"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3359,
+      "sha256": "366c06d3b8d30507ee64acc4831a506f61af11b0da12f8e12fe7ae1e4fe8fe3a"
+    },
+    {
+      "path": "docs/build.md",
+      "bytes": 4948,
+      "sha256": "85c98afc1b27a4e2b063b7eaada91918455625b31d9ef2df7a4a543df77e98c5"
+    },
+    {
+      "path": "docs/data-format.md",
+      "bytes": 1457,
+      "sha256": "ea123d705372f57c06123e869c487158ae5854054ae95faf5ef54b1f1883b571"
+    },
+    {
+      "path": "docs/publication-validation.md",
+      "bytes": 1249,
+      "sha256": "be2527aaf2277501336ff437505b64df018bce7ffac9aef669360e170c8371c4"
+    },
+    {
+      "path": "docs/reproduction.md",
+      "bytes": 4030,
+      "sha256": "c4e0564cd6530a8920b404832fe467e2a00fba015035c08b24b2585935f96c36"
+    },
+    {
+      "path": "docs/unsigned-clear-candidate.md",
+      "bytes": 3489,
+      "sha256": "2fcab40f707b5d65b0efd0de4c3b2f4546a20493bfef1ffa52df2e3351fc39c2"
+    },
+    {
+      "path": "evidence/build-provenance.json",
+      "bytes": 11806,
+      "sha256": "364c9dda284534f4c8311797c1e1d75c7410e3dc2d40d5f0089a409d8993d621"
+    },
+    {
+      "path": "evidence/environment.json",
+      "bytes": 907,
+      "sha256": "a7bf05656c4a2ea91135a2be4328fb0715a7ba3a916032d75a1bea7721335441"
+    },
+    {
+      "path": "evidence/factorio-replay.json",
+      "bytes": 821,
+      "sha256": "09ca1e9799d6d3881d398ed45a55831b3f354c8915e2a7f931e6ad247540b35f"
+    },
+    {
+      "path": "evidence/indirect-reduction.json",
+      "bytes": 39601,
+      "sha256": "94755c3e713544e6c27b818973b631211cb10d86ae28ce97ff0b03e2bb84e606"
+    },
+    {
+      "path": "evidence/unsigned-clear.json",
+      "bytes": 30057,
+      "sha256": "b3e81842ac6cf7492aebcbb6462af07b49c35a721f9baef50b09539802019ef2"
+    },
+    {
+      "path": "evidence/vertex-id.json",
+      "bytes": 19053,
+      "sha256": "762d7af7d2fb8d7aa7cfa469bf415ce625d6a58b12c893f58e7486fae2b4baf5"
+    },
+    {
+      "path": "findings.json",
+      "bytes": 3714,
+      "sha256": "c0acad2567f127570fcb0a5a8eeaf2877ca06590b7dbe7c229b329d55510a0fd"
+    },
+    {
+      "path": "patches/0001-svga-indexed-vertex-id-bias.patch",
+      "bytes": 665,
+      "sha256": "329965fb2bd73df32bf17a9bd3b022fd2c8472b0f363a08bd76b744489631ff6"
+    },
+    {
+      "path": "reproducer/vertex_id.py",
+      "bytes": 14332,
+      "sha256": "aa47a17a93eff5ea420705673a59116b72abb80aa4c1b7a315a2e69504523233"
+    },
+    {
+      "path": "schema/findings.schema.json",
+      "bytes": 1893,
+      "sha256": "64773dc85feaa7d07a8b4f8fcd747dc9f0bc60d9dc01d5e6f317b4cf77a4dc15"
+    },
+    {
+      "path": "tests/test_publication.py",
+      "bytes": 5702,
+      "sha256": "69eb49c916ac77b8aa182a791671917923f6fb41b40fbd3aaf9c9a45e73b5ace"
+    }
+  ]
+}

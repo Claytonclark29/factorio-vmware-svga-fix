@@ -1,0 +1,15 @@
+--- a/src/gallium/drivers/svga/svga_pipe_draw.c
++++ b/src/gallium/drivers/svga/svga_pipe_draw.c
+@@ -236,9 +236,9 @@
+     * always start from 0 for DrawArrays and does not include baseVertex for
+     * DrawIndexed.
+     */
+-   unsigned index_bias = info->index_size ? draws->index_bias : 0;
+-   if (svga->curr.vertex_id_bias != (draws[0].start + index_bias)) {
+-      svga->curr.vertex_id_bias = draws[0].start + index_bias;
++   unsigned vertex_id_bias = info->index_size ? draws->index_bias : draws[0].start;
++   if (svga->curr.vertex_id_bias != vertex_id_bias) {
++      svga->curr.vertex_id_bias = vertex_id_bias;
+       svga->dirty |= SVGA_NEW_VS_CONSTS;
+    }
+ 
